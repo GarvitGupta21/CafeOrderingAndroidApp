@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/CoffeeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginEnd="143dp"
+        android:text="Order Coffee"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/CoffeeImage"
+        android:layout_width="88dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/CreamChecker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CoffeeDisplay"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <CheckBox
+        android:id="@+id/MilkChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="50dp"
+        android:onClick="updateMilkPrice"
+        android:text="Milk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CoffeeImage" />
+
+    <CheckBox
+        android:id="@+id/CaramelChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="107dp"
+        android:onClick="updateCaramelPrice"
+        android:text="Caramel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/WhippedCreamChecker"
+        app:layout_constraintTop_toBottomOf="@+id/CreamChecker" />
+
+    <CheckBox
+        android:id="@+id/WhippedCreamChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="updateWhippedPrice"
+        android:text="Whipped Cream"
+        app:layout_constraintEnd_toStartOf="@+id/CaramelChecker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MilkChecker" />
+
+    <CheckBox
+        android:id="@+id/CreamChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="25dp"
+        android:onClick="updateCreamPrice"
+        android:text="Cream"
+        app:layout_constraintEnd_toStartOf="@+id/SyrupChecker"
+        app:layout_constraintStart_toEndOf="@+id/MilkChecker"
+        app:layout_constraintTop_toBottomOf="@+id/CoffeeImage" />
+
+    <CheckBox
+        android:id="@+id/SyrupChecker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="61dp"
+        android:onClick="updateSyrupPrice"
+        android:text="Syrup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/CreamChecker"
+        app:layout_constraintTop_toBottomOf="@+id/CoffeeImage" />
+
+    <Spinner
+        android:id="@+id/QuantityCoffeeSpinner"
+        android:layout_width="148dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="49dp"
+        android:contentDescription="@string/appbar_scrolling_view_behavior"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CaramelChecker" />
+
+    <Spinner
+        android:id="@+id/SizeCoffeeSpinner"
+        android:layout_width="148dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/appbar_scrolling_view_behavior"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toStartOf="@+id/QuantityCoffeeSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CaramelChecker" />
+
+    <TextView
+        android:id="@+id/PriceDisplayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="169dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="184dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/QuantityCoffeeSpinner" />
+
+    <Button
+        android:id="@+id/AddCoffeeToOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="165dp"
+        android:onClick="addCoffee"
+        android:text="Add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PriceDisplayer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">RuCafeAndroid</string>
+
+    <string-array name="Donut_Flavors">
+        <item>Chocolate Yeast Donut</item>
+        <item>Boston Cream Yeast Donut</item>
+        <item>Jelly Yeast Donut</item>
+        <item>Strawberry Yeast Donut</item>
+        <item>Chocolate Cake Donut</item>
+        <item>Boston Cream Cake Donut</item>
+        <item>Jelly Cake Donut</item>
+        <item>Strawberry Cake Donut</item>
+        <item>Chocolate Donut Hole</item>
+        <item>Boston Cream Donut Hole</item>
+        <item>Jelly Donut Hole</item>
+        <item>Strawberry Donut Hole</item>
+    </string-array>
+
+    <string-array name="Coffee_Sizes">
+        <item>Short</item>
+        <item>Tall</item>
+        <item>Venti</item>
+        <item>Grande</item>
+    </string-array>
+
+    <string name="alert_yes">Yes</string>
+    <string name="alert_no">No</string>
+    <string name="yeast_Price">$1.59</string>
+    <string name="addedOrder">&#160;was added to order!</string>
+    <string name="title_activity_ordering_coffee">Ordering_Coffee</string>
+    <string name="place_order_error_when_order_empty">There are no items in your order!</string>
+    <string name="removeObjectItemConfirmation">Item removed!</string>
+    <string name="cancelItemTitle">Cancel Item?</string>
+    <string name="cancelItemMessage">Are you sure you want to delete the selected item: \n</string>
+    <string name="placeOrderTitle">Place Order?</string>
+    <string name="placeOrderMessage">Are you sure you want to place this order?</string>
+    <string name="cancelOrderTitle">Cancel Order?</string>
+    <string name="cancelOrderMessage">Are you sure you want to cancel this order?</string>
+    <string name="cancelOrderConfirmation">Order cancelled!</string>
+    <string name="cancel_order_error">There are no orders to cancel!</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+</resources>

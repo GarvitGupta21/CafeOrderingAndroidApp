@@ -1,0 +1,58 @@
+/**
+ * CakeDonut class creates a cake donut object that extends Menuiten.
+ * CakeDonut Object holds the flavor, quantity, and price of a Cake Donut.
+ *
+ * @author Garvit Gupta, Udayan Rai
+ */
+
+package com.example.rucafeandroid;
+
+public class CakeDonut extends MenuItem {
+    private String flavor;
+    public static final double CAKE_PRICE = 1.79;
+
+
+    /**
+     Constructor for the CakeDonut Class.
+     @param flavor, the flavor of the cake-donuts.
+     @param quantity, the quantity of cake-donuts
+     */
+    public CakeDonut(String flavor, int quantity) {
+        super(CAKE_PRICE, quantity);
+        this.flavor = flavor;
+    }
+
+
+    /**
+     * This method Calculates the total price of a Cake Donut factoring in quantity
+     * @return itemPrice
+     */
+    @Override
+    public double itemPrice() {
+        return super.itemPrice();
+    }
+
+
+    /**
+     * Method to return the Cake-Donut details in readable format.
+     * @return output details of a Cake-Donut
+     */
+    @Override
+    public String toString() {
+        return flavor + " Cake-Donut " + super.toString();
+    }
+
+    /**
+     * Method to check if a Cake-donut is equal to another cake donut.
+     * @param obj Object that is to be compared
+     * @return true if 2 cake-Donuts are equal, false otherwise.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof CakeDonut) {
+            CakeDonut item = (CakeDonut) obj;
+            return (super.equals(item) && this.flavor.equals(item.flavor));
+        }
+        return false;
+    }
+}
